@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector Manhwas</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">Lector Manhwas</a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#app-container">Inicio</a></li>
+          <li><a href="#grid-manhwas">Manhwas</a></li>
+          <li>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Buscar manhwa..."
+            >
+          </li>
+          <li>
+            <button id="theme-toggle" type="button">◑</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app-container">
+      <section id="home-view" aria-labelledby="latest-updates-title">
+        <h2 id="latest-updates-title">Últimas Actualizaciones</h2>
+        <div id="grid-manhwas"></div>
+      </section>
+
+      <section id="detail-view" class="hidden">
+        <button id="btn-back" type="button">⬅ Volver al catálogo</button>
+        <div id="detail-content"></div>
+      </section>
+
+      <section id="reader-view" class="hidden">
+        <nav id="reader-nav" aria-label="Navegación del lector">
+          <button id="btn-back-detail" type="button">⬅ Volver a Detalles</button>
+          <span></span>
+        </nav>
+        <div id="reader-content"></div>
+      </section>
+    </main>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

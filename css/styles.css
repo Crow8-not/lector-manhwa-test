@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--primary-color);
+}
+
+#search-input {
+  padding: 0.5rem 0.75rem;
+  color: var(--text-primary);
+  background-color: var(--surface-color);
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: var(--border-radius);
+}
+
+#search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+#theme-toggle {
+  padding: 0;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#app-container {
+  padding: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#btn-back {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  color: var(--primary-color);
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+#btn-back:hover,
+#btn-back:focus-visible {
+  text-decoration: underline;
+}
+
+#detail-content {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+#detail-content ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#detail-content li {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#detail-content li:hover,
+#detail-content li:focus-within {
+  background-color: var(--surface-color);
+}
+
+#detail-content li a {
+  display: block;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+#grid-manhwas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.manhwa-card {
+  overflow: hidden;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.cover-container {
+  position: relative;
+}
+
+.history-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.manhwa-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  overflow: hidden;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-info p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  #detail-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+#reader-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  background-color: rgb(24 24 27 / 85%);
+  backdrop-filter: blur(8px);
+}
+
+#reader-nav button {
+  padding: 0;
+  color: var(--primary-color);
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+#reader-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#reader-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
