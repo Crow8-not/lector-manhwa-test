@@ -90,6 +90,32 @@ nav a:focus-visible {
   display: none !important;
 }
 
+#loading-spinner {
+  margin: 1rem 0;
+  text-align: center;
+  animation: loading-pulse 1.5s ease-in-out infinite;
+}
+
+#error-message {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-align: center;
+  background-color: #b91c1c;
+  border-radius: var(--border-radius);
+}
+
+@keyframes loading-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 #btn-back {
   margin-bottom: 1.5rem;
   padding: 0;

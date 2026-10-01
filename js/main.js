@@ -7,6 +7,9 @@ if (savedTheme === "light") {
 }
 
 async function loadData() {
+  const loadingSpinner = document.getElementById("loading-spinner");
+  loadingSpinner.classList.remove("hidden");
+
   try {
     const response = await fetch("./data/manhwas.json");
 
@@ -16,8 +19,14 @@ async function loadData() {
 
     const data = await response.json();
     manhwaDatabase = data;
+    loadingSpinner.classList.add("hidden");
     renderHome();
   } catch (error) {
+    loadingSpinner.classList.add("hidden");
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.classList.remove("hidden");
+    errorMessage.innerHTML =
+      "Hubo un error al cargar los manhwas. Por favor, intenta de nuevo más tarde";
     console.error("Error al cargar los datos de manhwas:", error);
   }
 }
