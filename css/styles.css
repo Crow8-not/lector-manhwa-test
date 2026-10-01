@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -15,13 +21,16 @@ body {
   color: var(--text-primary);
   font-family: Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 10px;
   padding: 1rem 2rem;
 }
 
@@ -51,6 +60,7 @@ nav a:focus-visible {
 }
 
 #search-input {
+  max-width: 100%;
   padding: 0.5rem 0.75rem;
   color: var(--text-primary);
   background-color: var(--surface-color);
@@ -219,4 +229,33 @@ nav a:focus-visible {
   width: 100%;
   height: auto;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  #grid-manhwas {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  #detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  #detail-content .manhwa-cover {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  #app-container {
+    padding: 1rem;
+  }
+
+  .card-info {
+    padding: 0.75rem;
+  }
 }
