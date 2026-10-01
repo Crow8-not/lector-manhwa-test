@@ -1,0 +1,52 @@
+[
+    {
+        "id": "m-001",
+        "title": "El Regreso del Héroe",
+        "cover": "./assets/covers/001.jpg",
+        "type": "Manhwa",
+        "status": "En Emisión",
+        "synopsis": "Después de salvar el mundo, el héroe es traicionado. Ahora ha retrocedido en el tiempo 10 años para cambiar su destino.",
+        "latestChapter": 45,
+        "chapters": [
+            { 
+                "number": 45, 
+                "date": "2026-09-30",
+                "pages": [
+                    "./assets/pages/1.jpg",
+                    "./assets/pages/2.jpg",
+                    "./assets/pages/3.jpg",
+                    "./assets/pages/4.jpg"
+                ] 
+            }
+        ]
+    },
+    {
+        "id": "m-002",
+        "title": "Cultivación Celestial",
+        "cover": "./assets/covers/002.jpg",
+        "type": "Manhua",
+        "status": "Pausado",
+        "synopsis": "Un joven sin talento encuentra un artefacto milenario.",
+        "latestChapter": 112,
+        "chapters": []
+    },
+    {
+        "id": "m-003",
+        "title": "El Último Guerrero",
+        "cover": "./assets/covers/003.jpg",
+        "type": "Manhwa",
+        "status": "Finalizado",
+        "synopsis": "En un mundo donde los guerreros luchan por la supremacía, un joven se levanta para desafiar a los dioses.",
+        "latestChapter": 78,
+        "chapters": [
+            { 
+                "number": 78, 
+                "date": "2025-12-15",
+                "pages": [
+                    "./assets/pages/1.jpg",
+                    "./assets/pages/2.jpg"
+                ] 
+            }
+        ]
+    }
+]

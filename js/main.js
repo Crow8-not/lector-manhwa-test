@@ -1,7 +1,25 @@
+let manhwaDatabase = [];
+
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "light") {
   document.body.classList.add("light-theme");
+}
+
+async function loadData() {
+  try {
+    const response = await fetch("./data/manhwas.json");
+
+    if (!response.ok) {
+      throw new Error(`No se pudo cargar la base de datos: ${response.status}`);
+    }
+
+    const data = await response.json();
+    manhwaDatabase = data;
+    renderHome();
+  } catch (error) {
+    console.error("Error al cargar los datos de manhwas:", error);
+  }
 }
 
 function guardarProgreso(manhwaId, chapterNumber) {
@@ -102,7 +120,7 @@ function showReader(manhwaId, chapterIndex) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderHome();
+  loadData();
 
   document.getElementById("search-input").addEventListener("input", (event) => {
     const searchTerm = event.target.value.toLowerCase();
